@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(https://db.onlinewebfonts.com/c/3066b11123e63381b8e2aa554b18bf32?family=Bauhaus+93+V1);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'sans-serif';
+}
+
+
+.banner {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    right: 0;
+    width: 100%;
+    /*background: url(../img/bg.png);*/
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(105%);
+    transition: 0.5s;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.banner .menu {
+    z-index: 2;
+    position: relative;
+    margin-right: 5em;
+}
+
+.banner.active {
+    right: 300px;
+}
+
+.banner::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    pointer-events: none;
+}
+
+.banner .nav {
+    z-index: 10;
+    padding: 0 0 0 2.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 12%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.banner .nav::before {
+    z-index: 1;
+    content: '';
+    top: 100%;
+    left: 0;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: #ffffff;
+    opacity: 0.6;
+}
+
+.banner .nav .logo {
+    margin-left: 5em;
+    text-align: center;
+}
+
+.banner .nav .logo a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2.5em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: 'Bauhaus 93';
+}
+
+.banner .nav ul li {
+    display: inline-block;
+    position: relative;
+    list-style: none;
+    margin-right: 3em;
+
+}
+
+.banner .nav ul li a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.banner .nav ul li::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 80%;
+    top: 120%;
+    left: 0;
+    background: #ffffff;
+    border-radius: 50px;
+    transform: scaleX(0);
+    visibility: hidden;
+    transition: transform linear 0.2s;
+}
+
+.banner .nav ul li:hover::after {
+    transform: scaleX(1);
+    visibility: visible;
+}
+
+.banner .title {
+    z-index: 10;
+    transform: translateY(-20%);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner .title h1 {
+    color: #ffffff;
+    font-size: 4em;
+    letter-spacing: 5px;
+    font-weight: 100;
+    font-family: 'Bauhaus 93';
+    margin-bottom: 30px;
+}
+
+.banner .title p {
+    color: #ffffff;
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin-bottom: 60px;
+}
+
+.banner .title a {
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3);
+    outline-style: none;
+    color: #ffffff;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.banner .title a:hover {
+    color: #467b63;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.banner .bottom-bar {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    width: 80%;
+    height: 22vh;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.banner .bottom-bar .item {
+    padding-top: 25px;
+    transition: 0.5s ease-in-out;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.banner .bottom-bar .item:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 1px;
+    height: 80%;
+    background: #ffffff;
+    opacity: 0.6s;
+}
+
+.banner .bottom-bar .item::after {
+    content: '';
+    position: absolute;
+    left: 10%;
+    bottom: 20%;
+    width: 80%;
+    height: 1px;
+    background: #ffffff;
+    opacity: 0.6s;
+}
+
+.banner .bottom-bar .item .hover-bar {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background: #ffffff;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.banner .bottom-bar .item .img-box {
+    transition: 0.5s ease-in-out;
+    width: 100%;
+    height: 55%;
+}
+
+.banner .bottom-bar .item .img-box img {
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.banner .bottom-bar .item:hover .img-box img {
+    opacity: 1;
+}
+
+.banner .bottom-bar .item:hover .hover-bar {
+    opacity: 1;
+    visibility: visible;
+}
+
+.banner .bottom-bar .item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.banner .bottom-bar .item p {
+    transform: 0.5s ease-in-out;
+    color: #ffffff;
+    opacity: 0.7;
+    margin: 0 0 15px 0;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+}
+
+.banner .bottom-bar .item a {
+    position: absolute;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1em;
+    letter-spacing: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 7%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.banner .bottom-bar .item:hover a {
+    opacity: 1;
+    visibility: visible;
+}
+
+.banner .bottom-bar .item:hover p {
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
+.banner .bottom-bar .item:hover .img-box {
+    transform: translateY(-10%);
+}
+
+@media (max-width: 768px) {
+    .banner .nav {
+        width: 88%;
+        padding: 0;
+    }
+
+    .banner .nav .logo {
+        margin-left: 3.5em;
+    }
+
+    .banner .nav menu-bar {
+        visibility: visible;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner .bottom-bar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .banner .bottom-bar .item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

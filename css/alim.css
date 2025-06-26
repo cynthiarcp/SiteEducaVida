@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(https://db.onlinewebfonts.com/c/3066b11123e63381b8e2aa554b18bf32?family=Bauhaus+93+V1);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.alim-html {
+  font-family: 'Roboto', 'sans-serif';
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #ffffff;
+  background-image: url();
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+
+}
+
+.banner-alim {
+  width: 100%;
+  background-color: #FCAA67;
+  padding: 1em;
+  position: relative;
+}
+
+.banner-alim .nav-alim {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-alim .nav-alim .logo-alim {
+  margin-left: 5em;
+  text-align: center;
+}
+
+.banner-alim .nav-alim .logo-alim a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 2.5em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: 'Bauhaus 93';
+}
+
+.banner-alim .nav-alim ul li {
+  display: inline-block;
+  position: relative;
+  list-style: none;
+  margin-right: 3em;
+}
+
+.banner-alim .nav-alim ul li a {
+  text-decoration: none;
+  font-size: 1.1em;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+.banner-alim .nav-alim ul li::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 80%;
+  top: 120%;
+  left: 0;
+  background: #ffffff;
+  border-radius: 50px;
+  transform: scale(0);
+  visibility: hidden;
+  transition: transform linear 0.2s;
+}
+
+.banner-alim .nav-alim ul li:hover::after {
+  transform: scale(1);
+  visibility: visible;
+}
+
+.main-alim {
+  text-align: center;
+  padding: 2em;
+  margin: 30px auto;
+  border-radius: 16px;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.alim-container-alim {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.alim-container-h1-alim {
+  color: #FCAA67;
+  margin-bottom: 20px;
+  font-family: 'Bauhaus 93';
+  text-decoration: none;
+  font-size: 2.5em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 10px;
+}
+
+.alim-container-h2-alim {
+  color: #FCAA67;
+  margin-bottom: 20px;
+  font-family: 'Bauhaus 93';
+  text-decoration: none;
+  font-size: 2.5em;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.sub-alim {
+  font-family: 'Roboto', 'sans-serif';
+  padding: 10px;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.subimg {
+  display: flex;
+  padding: 15px;
+  font-size: 1.5em;
+  align-items: center;
+}
+
+.img-alim {
+  width: 380px;
+  height: auto;
+  padding: 15PX;
+}
+
+.subtitle {
+  color: #4a4a4a;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.step-alim {
+  background-color: #fde78ea9;
+  border: 1px solid #d6d6d6;
+  border-radius: 12px;
+  padding: 30px 40px;
+  margin: 30px auto;
+  display: flex;
+  align-items: flex-start;
+  max-width: 800px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  gap: 20px;
+}
+
+.step-number-alim {
+  background-color: #fc420f88;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.step-content-alim {
+  text-align: left;
+  flex: 1;
+}
+
+.step-content-alim h2 {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+  color: #2b2b2b;
+}
+
+.step-content-alim p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+a {
+  color: #7e75fc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.sec-conteudo {
+  text-align: left;
+  padding: 40px;
+}
+
+.sec-conteudo h2 {
+  padding: 20px;
+  color: #FCAA67;
+  margin-bottom: 20px;
+  font-family: 'Bauhaus 93';
+  text-decoration: none;
+  font-size: 2.5em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 10px;
+}
+
+.sec-conteudo p {
+  padding: 20px;
+}
+
+.sec-div {
+  display: flex;
+  padding: 30px;
+  font-size: 1.5em;
+  align-items: center;
+}
+
+.sec-subtitulo {
+  font-family: 'Roboto', 'sans-serif';
+  padding: 10px;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.sec-img {
+  width: 380px;
+  height: auto;
+  padding: 15PX;
+}
+
+
+.faq-alim {
+  background-color: #fde7d5;
+  border-radius: 12px;
+  border: 1px solid #d6d6d6;
+  padding: 30px 25px;
+  margin-top: 40px;
+  text-align: left;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.faq-alim h2 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #f78a31;
+}
+
+.faq-item-alim {
+  margin-bottom: 20px;
+}
+
+.faq-item-alim strong {
+  display: block;
+  font-weight: bold;
+  color: #f88c33;
+  margin-bottom: 5px;
+}
+
+.faq-item-alim p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.rodape-alim {
+  background-color: #FCAA67;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 1em;
+  margin-top: 3em;
+}

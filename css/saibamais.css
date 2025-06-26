@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(https://db.onlinewebfonts.com/c/3066b11123e63381b8e2aa554b18bf32?family=Bauhaus+93+V1);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.alim-html {
+    font-family: 'Roboto', 'sans-serif';
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+    background-image: url();
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+.banner-alim {
+    width: 100%;
+    background-color: #AF3E4D;
+    padding: 1em;
+    position: relative;
+}
+
+.banner-alim .nav-alim {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-alim .nav-alim .logo-alim {
+    margin-left: 5em;
+    text-align: center;
+}
+
+.banner-alim .nav-alim .logo-alim a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2.5em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: 'Bauhaus 93';
+}
+
+.banner-alim .nav-alim ul li {
+    display: inline-block;
+    position: relative;
+    list-style: none;
+    margin-right: 3em;
+}
+
+.banner-alim .nav-alim ul li a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.banner-alim .nav-alim ul li::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 80%;
+    top: 120%;
+    left: 0;
+    background: #ffffff;
+    border-radius: 50px;
+    transform: scale(0);
+    visibility: hidden;
+    transition: transform linear 0.2s;
+}
+
+.banner-alim .nav-alim ul li:hover::after {
+    transform: scale(1);
+    visibility: visible;
+}
+
+.sessao {
+    text-align: center;
+    padding: 2em;
+    background: #ffffff;
+    padding: 40px;
+    margin: 30px auto;
+    border-radius: 16px;
+    max-width: 900px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.titulo {
+    color: #26547C;
+    margin-bottom: 20px;
+    font-family: 'Bauhaus 93';
+    text-decoration: none;
+    font-size: 2.5em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 10px;
+}
+
+.sessao p {
+    color: #494949;
+    margin-bottom: 20px;
+    font-family: 'Roboto', 'sans-serif';
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 10px;
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.rodape-alim {
+    background-color: #AF3E4D;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 1em;
+    margin-top: 10em;
+}
